@@ -1,0 +1,16 @@
+class PruebasPaginaAcercaDe(SimpleTestCase):
+    def test_la_url_existe_en_la_ubicacion_correcta(self):
+        respuesta = self.client.get('/acerca de/')
+        self.assertEqual(respuesta.status_code, 200)
+
+    def test_url_disponible_por_nombre(self):
+        respuesta = self.client.get(reverse('acerca de'))
+        self.assertEqual(respuesta.status_code, 200)
+
+    def test_nombre_correcto_de_la_plantilla(self):
+        respuesta = self.client.get(reverse("acerca de"))
+        self.assertTemplateUsed(respuesta, "acerca de.html")
+
+    def test_contenido_de_la_plantilla(self):
+        respuesta = self.client.get(reverse("acerca de"))
+        self.assertContains(respuesta, "<h1>Página Acerca de</h1>")
