@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mostrar_frontend, name='frontend'),  # Página principal
     path('contacto/', contacto, name='contacto'),  # Página de contacto
-    path('contacto/', mostrar_about, name='about')  # Página de contacto
+    path('contacto/', mostrar_about, name='about'),  # Página de contacto
+
 ]

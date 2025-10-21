@@ -1,20 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de César</title>
+    <title>Mi Sitio</title>
+    
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}"> 
+    
 </head>
 <body>
-    <h1>Acerca de César</h1>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <img src="{% static  'img_01'%}" alt="">
 
-    <ul>
-        <li><a href="https://www.facebook.com/photo/?fbid=104570400928680&set=ecnf.100041271608320&locale=es_LA" target="_blank">Perfil de César</a></li>
-    </ul>
+        </nav>
+    </header>
 
-    <p>Esta página es un experimento para aprender HTML y plantillas Django.</p>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a mi Proyecto Django</h1>
+            <p>Explora nuestras secciones y descubre lo que hacemos.</p>
+            <button class="call-to-action">¡Comienza ahora!</button>
+        </section>
 
-    <a href="{% url 'contacto' %}">Ir a la sección de contacto</a>
-    <a href="{% url 'about' %}">Ir a la sección de info</a>
+        <section class="features">
+            <div class="feature-item">
+                <h3>Característica 1</h3>
+                <p>Descripción breve de la primera característica.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Característica 2</h3>
+                <p>Descripción breve de la segunda característica.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Característica 3</h3>
+                <p>Descripción breve de la tercera característica.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mi Proyecto Django. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

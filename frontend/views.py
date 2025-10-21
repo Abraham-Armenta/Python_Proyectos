@@ -9,3 +9,4 @@ def contacto(request):
 
 def mostrar_about(request):
     return render(request, 'about.html')
+
